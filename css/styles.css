@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+#home-body {
+    background-color: #1009E5;
+    color: white;
+    overflow: hidden;
+}
+
+/* MENÚ */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin: 0 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #FFD700; 
+    /* ¡CAMBIAR COLOR A NARANJA DE BEMETA! */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 1.75em;
+}
+
+/* HOME PAGE */
+
+.h1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    overflow: hidden; /* Evita que el contenido del contenedor provoque desplazamiento */
+    background-color: transparent;
+    z-index: -1;
+}
+
+.moving-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    transition: transform 0.05s ease-out; /* Transición para movimientos suaves */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENÚ HAMBURGUESA RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu ul.show {
+        display: flex;
+        margin-top: 25px;
+        transition: transform 0.05s ease-out; /* Transición para movimientos suaves */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu ul li {
+        margin: 10px 0; /* Espaciado entre elementos del menú en móvil */
+        text-align: center;
+    }
+}
