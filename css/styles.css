@@ -1,7 +1,14 @@
 body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box; 
 }
+
+img {
+    border: 1.75px solid #1009E5;
+}
+
 
 #home-body {
     background-color: #1009E5;
@@ -14,11 +21,23 @@ body {
 }
 
 /* MENÚ */
+
+#home-body .menu {
+    background-color: #1009E5;
+}
+
 .menu {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 45px;
+    padding: 35px;
+    position: sticky;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0px 2px 5px #1009E5;
 }
 
 .menu ul {
@@ -52,6 +71,17 @@ body {
     font-size: 1.75em;
 }
 
+.dynamic-heading {
+    font-size: 3rem; /* Tamaño inicial */
+    transition: font-size 0.3s ease; /* Transición suave */
+}
+
+/* Tamaño reducido del h2 */
+.dynamic-heading.shrink {
+    font-size: 1.5rem; /* Tamaño reducido */
+}
+
+
 /* HOME PAGE */
 
 .h1-container {
@@ -66,7 +96,6 @@ body {
     right: 50%;
 }
 
-
 h1 {
     font-size: 4rem;
     margin: 0;
@@ -77,7 +106,6 @@ h1 {
 .container {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 100px);
     overflow: hidden; /* Evita que el contenido del contenedor provoque desplazamiento */
     background-color: transparent;
     z-index: -1;
@@ -95,23 +123,87 @@ h1 {
 
 /* COLLECTION PAGE */
 
+    /* NEWSLETTER */
+    
+.newsletter-banner {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #1009E5; /* Fondo amarillo */
+    color: white; /* Texto negro */
+    text-align: center;
+    font-size: 0.75em; /* Tamaño del texto */
+    padding: 10px 0; /* Espaciado vertical */
+    z-index: 20; /* Asegura que esté encima del menú */
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 400;
+    color: #1009E5;
+    margin-bottom: 25px;
+}
+
+#collection {
+    text-decoration: auto;
+    border-bottom: 1.5px solid #1009E5;
+}
+
+.text-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    background-color: #1009E5;
+    padding: 10px 0; 
+}
+
+.text-banner span {
+    display: inline-block;
+    white-space: nowrap;
+    color: white; 
+    font-size: 1.25em; 
+    animation: moveText 20s linear infinite; 
+}
+
+/* Animación de desplazamiento */
+@keyframes moveText {
+    from {
+        transform: translateX(100%); /* Inicia fuera de la pantalla, a la derecha */
+    }
+    to {
+        transform: translateX(-100%); /* Termina fuera de la pantalla, a la izquierda */
+    }
+}
+
 
 .section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #1009E5;
 }
 
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border: 1.75px solid #1009E5;
+    border-radius: 0px;
+    height: 600px;
+    object-fit: cover;
+    width: 100%; 
 }
+
+.card-body {
+    text-align: left !important;
+    color: #1009E5;
+}
+
+.card-title {
+    font-size: 1em;
+}
+
+
 
 .fullscreen-image {
     width: 100%;
@@ -153,8 +245,14 @@ h1 {
 
     .menu ul.show {
         display: flex;
-        margin-top: 25px;
+        margin-top: 100px;
         transition: transform 0.05s ease-out;
+        background-color: white;
+        box-shadow: 5px 2px 2px #1009E5;
+    }
+
+    i {
+        color: #1009E5;
     }
 
     .menu-toggle {
@@ -164,5 +262,14 @@ h1 {
     .menu ul li {
         margin: 10px 0; 
         text-align: center;
+    }
+
+    .card img {
+        height: 500px; /*para que la img sea más pequeña en el móvl*/
+    }
+
+    .newsletter-banner {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        padding: 8px 0; /* Reduce el espaciado vertical */
     }
 }

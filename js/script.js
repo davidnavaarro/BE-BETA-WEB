@@ -54,3 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     moveImage();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.querySelector('.dynamic-heading');
+
+    window.addEventListener('scroll', () => {
+        // Calculamos la posición de scroll
+        if (window.scrollY > 50) {
+            heading.classList.add('shrink'); // Aplica la clase cuando se hace scroll
+        } else {
+            heading.classList.remove('shrink'); // Restaura el tamaño inicial
+        }
+    });
+});
