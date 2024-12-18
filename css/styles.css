@@ -34,7 +34,7 @@ img {
     padding: 35px;
     position: sticky;
     background-color: white;
-    width: 100%;
+    /* width: 100%; */
     top: 0;
     z-index: 20;
     box-shadow: 0px 2px 5px #1009E5;
@@ -64,6 +64,10 @@ img {
     /* ¡CAMBIAR COLOR A NARANJA DE BEMETA! */
 }
 
+.menu div a {
+    text-decoration: none;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -71,16 +75,16 @@ img {
     font-size: 1.75em;
 }
 
+/* LOGO BEMETA SOBRE EL MENÚ EN EL RESTO DE LA WEB */
+
 .dynamic-heading {
-    font-size: 3rem; /* Tamaño inicial */
-    transition: font-size 0.3s ease; /* Transición suave */
+    font-size: 3rem; 
+    transition: font-size 0.3s ease; 
 }
 
-/* Tamaño reducido del h2 */
 .dynamic-heading.shrink {
-    font-size: 1.5rem; /* Tamaño reducido */
+    font-size: 1.5rem; 
 }
-
 
 /* HOME PAGE */
 
@@ -103,13 +107,17 @@ h1 {
     z-index: 1;
 }
 
-.container {
+/* IMAGEN QUE SE MUEVE EN LA HOMEPAGE */
+
+.home-container {
     position: relative;
     width: 100vw;
+    height: 90vh;
     overflow: hidden; /* Evita que el contenido del contenedor provoque desplazamiento */
     background-color: transparent;
     z-index: -1;
 }
+
 
 .moving-image {
     position: absolute;
@@ -147,6 +155,8 @@ h2 {
     border-bottom: 1.5px solid #1009E5;
 }
 
+/* TEXTO EN MOVIMIENTO */
+
 .text-banner {
     position: relative;
     width: 100%;
@@ -163,7 +173,7 @@ h2 {
     animation: moveText 20s linear infinite; 
 }
 
-/* Animación de desplazamiento */
+
 @keyframes moveText {
     from {
         transform: translateX(100%); /* Inicia fuera de la pantalla, a la derecha */
@@ -180,6 +190,8 @@ h2 {
     margin-bottom: 50px;
     color: #1009E5;
 }
+
+/* CARDS COLLECTION PAGE */
 
 .card {
     border: none;
@@ -203,7 +215,7 @@ h2 {
     font-size: 1em;
 }
 
-
+/* IMAGENES GRANDES BAJO LAS CARDS */
 
 .fullscreen-image {
     width: 100%;
@@ -229,7 +241,7 @@ h2 {
 
 
 
-
+/* RESPONSIVE */
 
 
 /* MENÚ HAMBURGUESA RESPONSIVE */
@@ -251,8 +263,17 @@ h2 {
         box-shadow: 5px 2px 2px #1009E5;
     }
 
+    #home-menu ul.show {
+        background-color: #1009E5;
+        margin-top: 50px;
+    }
+
     i {
         color: #1009E5;
+    }
+
+    .home-menu {
+        color: white;
     }
 
     .menu-toggle {
@@ -265,11 +286,11 @@ h2 {
     }
 
     .card img {
-        height: 500px; /*para que la img sea más pequeña en el móvl*/
+        height: 500px; 
     }
 
     .newsletter-banner {
-        font-size: 1rem; /* Reduce el tamaño del texto */
-        padding: 8px 0; /* Reduce el espaciado vertical */
+        font-size: 1rem; 
+        padding: 8px 0; /
     }
 }

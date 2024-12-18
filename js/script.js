@@ -10,50 +10,48 @@ $(document).ready(function () {
 // BEMETA ICON EN MOVIMIENTO
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const image = document.querySelector('.moving-image');
-    let x = 0;
-    let y = 0;
-    let dx = 2;
-    let dy = 2;
+$(document).ready(function () {
+    const $image = $('.moving-image');
+    const $container = $('.home-container');
+    
+    let x = 0; // Posición inicial en el eje X
+    let y = 0; // Posición inicial en el eje Y
+    let dx = 2; // Velocidad en el eje X
+    let dy = 2; // Velocidad en el eje Y
 
     function moveImage() {
-        const container = document.querySelector('.container');
-        const containerWidth = container.clientWidth;
-        const containerHeight = container.clientHeight;
+        const containerWidth = $container.width();
+        const containerHeight = $container.height();
+        const imageWidth = $image.width();
+        const imageHeight = $image.height();
 
-        const imageWidth = image.clientWidth;
-        const imageHeight = image.clientHeight;
-
-        // Cambiar posiciones
+        // Actualizamos las posiciones
         x += dx;
         y += dy;
 
-        // Detectar colisiones
-        if (x + imageWidth > containerWidth) {
-            x = containerWidth - imageWidth;
-            dx *= -1;
-        } else if (x < 0) {
-            x = 0;
-            dx *= -1;
+        // Detectamos colisiones con los bordes del contenedor
+        if (x + imageWidth > containerWidth || x < 0) {
+            dx *= -1; // Invertimos la dirección horizontal
+        }
+        if (y + imageHeight > containerHeight || y < 0) {
+            dy *= -1; // Invertimos la dirección vertical
         }
 
-        if (y + imageHeight > containerHeight) {
-            y = containerHeight - imageHeight;
-            dy *= -1;
-        } else if (y < 0) {
-            y = 0;
-            dy *= -1;
-        }
+        // Aplicamos las nuevas posiciones a la imagen
+        $image.css({
+            transform: `translate(${x}px, ${y}px)`,
+        });
 
-        // Mover imagen
-        image.style.transform = `translate(${x}px, ${y}px)`;
-
+        // Llamamos a la función de movimiento en el siguiente frame
         requestAnimationFrame(moveImage);
     }
 
+    // Iniciamos el movimiento
     moveImage();
 });
+
+
+// LOGO MÁS PEUQEÑO EN EL MENÚ AL HACER SCROLL
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,3 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// LOCOMOTIVE SCROLL JS
+
+// import LocomotiveScroll from 'locomotive-scroll';
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true
+// });
