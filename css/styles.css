@@ -265,14 +265,14 @@ h2 {
     color: #1009E5;
 }
 
-.btn-enviar {
+.btn-enviar, .btn-carrito {
     background-color: #1009E5;
     width: 100%;
     font-weight: 600;
     border: 0px;
 }
 
-.btn-enviar:hover {
+.btn-enviar:hover, .btn-carrito:hover {
     transition: 0.3s;
     background-color: #FF8A73;
     color: #1009E5;
@@ -295,10 +295,10 @@ h2 {
 
 footer {
     background-color: #1009E5;
+    max-width: 100%;
     color: white;
     font-family: 'Manrope', sans-serif;
-    padding: 2rem 0rem;
-    overflow-x: hidden;
+    padding: 2rem 2rem;
     
 
 }
@@ -323,9 +323,23 @@ footer a {
 }
 
 
+/* PÁGINA DE PRODUCTO */
 
+/* SECCIÓN 1 */
 
+.pr-detalles {
+    border: 1.5px solid #1009E5;
 
+}
+
+.pr-sep {
+    border-top: 1.5px solid #1009E5;
+    color: #1009E5;
+}
+
+.nom-pr {
+    font-weight: 700;
+}
 
 
 
