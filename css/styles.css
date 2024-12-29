@@ -60,7 +60,7 @@ img {
 }
 
 .menu ul li a:hover {
-    color: #FFD700; 
+    color: #FF8A73; 
     /* ¡CAMBIAR COLOR A NARANJA DE BEMETA! */
 }
 
@@ -238,13 +238,13 @@ h2 {
     font-weight: 600;
     text-align: center;
     padding: 10rem 3rem 3rem 3rem;
-    font-size: 4vw;
+    font-size: 4rem;
 }
 
 .texto-consulta {
     color:#1009E5;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     padding: 1rem 15vw 1rem 15vw;
 
 }
@@ -265,6 +265,19 @@ h2 {
     color: #1009E5;
 }
 
+.btn-enviar {
+    background-color: #1009E5;
+    width: 100%;
+    font-weight: 600;
+    border: 0px;
+}
+
+.btn-enviar:hover {
+    transition: 0.3s;
+    background-color: #FF8A73;
+    color: #1009E5;
+}
+
 .horario {
    color: #1009E5;
    font-weight: 700;
@@ -275,6 +288,34 @@ h2 {
     font-weight: 300;
 }
 
+footer {
+    background-color: #1009E5;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    padding: 2rem 0rem;
+    overflow-x: hidden;
+    
+
+}
+
+footer h5 {
+    font-weight: 700;
+}
+
+footer a {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.ft-hover:hover {
+    transition: 0.3s;
+    color: #FF8A73;
+}
+
+.rights {
+    font-size: 0.8rem;
+}
 
 
 
@@ -288,6 +329,15 @@ h2 {
 
 
 /* MENÚ HAMBURGUESA RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    /* PÁGINA DE CONTACTO */
+
+    .sect-form {
+        padding: 4rem;
+    }
+    
+}
+
 @media screen and (max-width: 768px) {
     .menu ul {
         display: none;
@@ -336,4 +386,56 @@ h2 {
         font-size: 1rem; 
         padding: 8px 0; /
     }
+
+    /*PÁGINA DE CONTACTO */
+
+    .form-contacto {
+        margin: 3rem;
+    }
+
+    .horario {
+        font-size: 0.8rem;
+        margin: 2rem;
+    }
+
 }
+
+@media screen and (max-width: 430px){
+    
+    /* PÁGINA DE CONTACTO */
+
+    .consulta {
+        font-size: 3rem;
+        padding-top: 4rem;
+    }
+
+    .texto-consulta {
+        font-size: 1rem;
+    }
+
+    .form-contacto {
+        font-size: 0.8rem;
+        padding: 2rem;
+        margin: 2rem;
+    }
+    
+    .horario {
+        font-size: 0.7rem;
+        margin: 2rem;
+    }
+
+    footer {
+        padding: 0rem 0.8rem;
+
+    }
+
+    footer a, footer h5{
+        font-size: 0.6rem;
+    }
+
+    .rights {
+        font-size: 0.4rem;
+    }
+}
+
+

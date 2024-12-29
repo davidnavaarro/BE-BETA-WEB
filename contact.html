@@ -58,50 +58,67 @@
         dudes en ponerte en contacto con nosotros. Nuestro equipo estará encantado de asistirte y ofrecerte la mejor
         solución. Puedes enviarnos un mensaje a través del formulario a continuación.</P>
 
-    <!-- FORMULARIO -->
-    <div class="sect-form form-contacto">
-        <form class="row g-3">
-            <div class="col-6">
-                <label for="validationDefault01" class="form-label">NOMBRE Y APELLIDOS</label>
-                <input type="text" class="form-control" id="validationDefault01" required>
-            </div>
-            <div class="col-6">
-                <label for="validationDefaultUsername" class="form-label">DIRRECCIÓN DE CORREO</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="validationDefaultUsername"
-                        aria-describedby="inputGroupPrepend2" required>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- FORMULARIO -->
+
+                <div class="sect-form form-contacto">
+                    <form class="row g-3">
+                        <div class="col-xl-6 col-md-12 col-sm-12">
+                            <label for="validationDefault01" class="form-label">NOMBRE Y APELLIDOS</label>
+                            <input type="text" class="form-control" id="validationDefault01" required>
+                        </div>
+                        <div class="col-xl-6 col-md-12 col-sm-12">
+                            <label for="validationDefaultUsername" class="form-label">DIRRECCIÓN DE CORREO</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="validationDefaultUsername"
+                                    aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-12 col-sm-12">
+                            <label for="validationDefault03" class="form-label">ASUNTO</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                        </div>
+                        <div class="col-xl-12 col-md-12 col-sm-12">
+                            <label for="validationDefault05" class="form-label">MENSAJE</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                                required></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center pt-4">
+                                <button class="btn btn-primary btn-enviar" type="submit">ENVIAR</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-12">
-                <label for="validationDefault03" class="form-label">ASUNTO</label>
-                <input type="text" class="form-control" id="validationDefault03" required>
-            </div>
-            <div class="col-12">
-                <label for="validationDefault05" class="form-label">MENSAJE</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required></textarea>
-            </div>
-            <div class="col-12 d-flex justify-content-center btn-enviar">
-                <button class="btn btn-primary btn-block" type="submit">ENVIAR</button>
-            </div>
-        </form>
-    </div>
 
+                <!-- HORARIOS -->
 
-    <!-- HORARIOS -->
-
-    <div class="horario">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-6 text-start">
-                    <P>HORARIO DE ATENCIÓN AL CLIENTE</P>
-                </div>
-                <div class="col-6 text-end">
-                    <p>LUNES A VIERNES<span class="horas"> de 9:00 a 18:00</span>
-                        </p>
+                <div class="horario pb-5">
+                    <div class="container text-center">
+                        <div class="row row-cols-3">
+                            <div class="col-6 text-start">
+                                <P>HORARIO DE ATENCIÓN AL CLIENTE</P>
+                            </div>
+                            <div class="col-6 text-end">
+                                <p>LUNES A VIERNES<span class="horas"> de 9:00 a 18:00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
 
     <!-- JS BOOSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -112,5 +129,32 @@
     <!-- LINK JS -->
     <script src="js/script.js"></script>
 </body>
+
+<footer class="overflow-x-hidden d-flex flex-column align-items-center ">
+    <div class="container m-0">
+        <div class="row">
+          <div class="col-4 py-4 d-flex flex-column">
+            <h5>Info</h5> 
+            <a class="ft-hover">Quiénes somos</a> 
+            <a class="ft-hover" href="contact.html">Contáctanos</a> 
+            <a class="ft-hover">Términos y condiciones</a> 
+            <a class="ft-hover">Aviso legal</a>
+          </div>
+          <div class="col-4 py-4 d-flex flex-column">
+            <h5>Descubre más</h5> 
+            <a class="ft-hover">Newsletter</a>
+            <a class="ft-hover" href="https://www.instagram.com/bemeta_lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a> 
+            
+            <a class="ft-hover" href="https://www.tiktok.com/@bemeta_lab?is_from_webapp=1&sender_device=pc" target="_blank">Tiktok</a> 
+            
+            <a class="ft-hover">Pinterest</a> 
+            
+          </div>
+          <div class="col-4 d-flex justify-content-end flex-direction: column align-items-end pb-1">
+            <p class="rights">bemeta / © All rights reserved 2025</p>
+          </div>
+          </div>
+        </div>
+</footer>
 
 </html>
