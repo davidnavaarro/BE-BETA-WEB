@@ -288,6 +288,11 @@ h2 {
     font-weight: 300;
 }
 
+.modal-body {
+    background-color: #1009E5;
+    color: white;
+}
+
 footer {
     background-color: #1009E5;
     color: white;

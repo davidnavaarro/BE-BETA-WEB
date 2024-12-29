@@ -88,11 +88,24 @@
                                 required></textarea>
                         </div>
                         <div class="col-12 d-flex justify-content-center pt-4">
-                                <button class="btn btn-primary btn-enviar" type="submit">ENVIAR</button>
+                            <button class="btn btn-primary btn-enviar" type="submit">ENVIAR</button>
+
                         </div>
                     </form>
                 </div>
             </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <P class="text-center m-0">Tu mensaje se ha enviado correctamente. ¡Pronto nos pondremos en contacto contigo!</P>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- mirar modal -->
             <div class="col-12">
 
                 <!-- HORARIOS -->
@@ -120,15 +133,10 @@
 
 
 
-    <!-- JS BOOSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!-- LINK JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- LINK JS -->
-    <script src="js/script.js"></script>
+ 
 </body>
+
+
 
 <footer class="overflow-x-hidden d-flex flex-column align-items-center ">
     <div class="container m-0">
@@ -157,4 +165,29 @@
         </div>
 </footer>
 
+   <!-- JS BOOSTRAP -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+   crossorigin="anonymous"></script>
+<!-- LINK JQUERY -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- LINK JS -->
+<script src="js/script.js"></script>
+
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario
+
+        // Aquí puedes agregar la lógica para enviar el formulario si es necesario
+        // Por ejemplo, usando AJAX para enviar los datos al servidor
+
+        // Muestra el modal
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        myModal.show();
+
+        // Reinicia el formulario si es necesario
+        this.reset();
+    });
+</script>
 </html>
