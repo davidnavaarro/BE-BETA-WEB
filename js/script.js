@@ -78,3 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 
+// CARRUSEL PRODUCTOS
+
+$(document).ready(function() {
+    $('.pr-carrusel').flickity({
+        cellAlign: 'left',
+        contain: true,
+        prevNextButtons: false,
+        pageDots: false,
+    });
+});
+
