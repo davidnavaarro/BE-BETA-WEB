@@ -328,16 +328,18 @@ footer a {
 /* SECCIÓN 1 */
 
 .pr-detalles {
-    border: 1.5px solid #1009E5;
     color: #1009E5;
-
 }
 
 .pr-sep {
-    border-top: 1.5px solid #1009E5;
+    border: 1.5px solid #1009E5;
+    border-bottom: 0;
     color: #1009E5;
 }
 
+.pr-sep-btn {
+    border: 1.5px solid #1009E5;
+}
 .nom-pr {
     font-weight: 700;
 }
@@ -345,14 +347,29 @@ footer a {
 .pr-carrusel {
     border: 1.5px solid #1009E5;
 }
+
+.flickity-page-dots .dot {
+    background: #1009E5;
+
+}
 .pr-img {
     border: none;
 }
-
 .te-puede-interesar {
     font-weight: 700;
 }
 
+.card-pr {
+    transition: 0.3s ease;
+}
+
+.card-img-pr {
+    height: auto !important;
+}
+
+.card-pr:hover {
+transform: scale(1.05);
+}
 
 
 
@@ -431,6 +448,12 @@ footer a {
         margin: 2rem;
     }
 
+    /* PÁGINA DE PRODUCTO */
+
+    .pr-img {
+        width: 100vw;
+    }
+
 }
 
 @media screen and (max-width: 430px){
@@ -469,6 +492,42 @@ footer a {
     .rights {
         font-size: 0.4rem;
     }
+
+    /* PÁGINA DE PRODUCTO */
+
+    .pr-carrusel {
+        width: 95vw;
+    }
+
+    .pr-img {
+        width: 100vw;
+    }
+
+    .pr-detalles {
+        width: 95vw;
+    }
+
+    .pr-sep h2 {
+        font-size: 2.5rem;
+    }
+
+    .pr-sep h4 {
+        font-size: 1.2rem;
+    }
+
+    .pr-sep p {
+        font-size: 0.9rem;
+    }
+
+    .te-puede-interesar {
+        font-size: 2.5rem;
+        
+    }
+
+    .card-pr {
+        padding-bottom: 2rem;
+    }
+
 }
 
 
