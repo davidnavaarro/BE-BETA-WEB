@@ -85,6 +85,7 @@ $(document).ready(function() {
         cellAlign: 'left',
         contain: true,
         prevNextButtons: false,
+        wrapAround: true,
     });
 });
 
