@@ -67,37 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// VENTANA MODAL
-
-const openModal = document.getElementById('openModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-
-    // Mostrar la ventana modal
-    openModal.addEventListener('click', () => {
-      modalOverlay.style.display = 'block';
-    });
-
-    // Cerrar la ventana modal
-    closeModal.addEventListener('click', () => {
-      modalOverlay.style.display = 'none';
-    });
-
-    // Cerrar al hacer clic fuera de la ventana modal
-    modalOverlay.addEventListener('click', (event) => {
-      if (event.target === modalOverlay) {
-        modalOverlay.style.display = 'none';
-      }
-    });
-
-    // Manejar el formulario
-    const form = document.getElementById('newsletterForm');
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      alert(`Gracias por suscribirte con el correo: ${email}`);
-      modalOverlay.style.display = 'none';
-    });
 
 // LOCOMOTIVE SCROLL JS
 
