@@ -67,6 +67,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// VENTANA MODAL
+
+// Obtener elementos del DOM
+const modal = document.getElementById('myModal');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const submitEmailBtn = document.getElementById('submitEmailBtn');
+const emailInput = document.getElementById('emailInput');
+
+// Abrir la ventana modal al hacer clic en el botón
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+// Cerrar la ventana modal al hacer clic en el botón de cerrar
+closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Cerrar la ventana modal si se hace clic fuera de la ventana modal
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Acción al hacer clic en el botón "Obtener Descuento"
+submitEmailBtn.addEventListener('click', () => {
+    const email = emailInput.value;
+    if (email) {
+        alert(`¡Descuento enviado a: ${email}!`);
+        modal.style.display = 'none'; // Cerrar modal después de enviar
+    } else {
+        alert('Por favor ingresa un correo válido');
+    }
+});
+
+
 
 // LOCOMOTIVE SCROLL JS
 
