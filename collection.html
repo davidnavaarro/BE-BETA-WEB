@@ -60,19 +60,21 @@
 
     <!-- VENTANA MODAL -->
 
-    <!-- Botón para abrir la ventana modal (simulación, puedes modificar la lógica para que se abra en otro momento) -->
-    <button id="openModalBtn">Ver Descuento</button>
+    <!-- Botón para abrir la ventana modal -->
+  <button id="openModal">Suscríbete a nuestra Newsletter</button>
 
-    <!-- La ventana modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModalBtn">&times;</span>
-            <h2>Obtén un 10% de descuento en tu primera compra</h2>
-            <p>Ingresa tu correo para recibir el descuento:</p>
-            <input type="email" id="emailInput" placeholder="Correo electrónico" />
-            <button id="submitEmailBtn">Obtener Descuento</button>
-        </div>
+  <!-- Ventana modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h2>Únete a nuestra Newsletter</h2>
+      <p>Recibe las últimas noticias directamente en tu correo electrónico.</p>
+      <form id="newsletterForm">
+        <input type="email" id="email" placeholder="Ingresa tu correo" required>
+        <button type="submit">Suscribirme</button>
+      </form>
     </div>
+  </div>
 
 
     <!-- SECCIÓN COLLECTION -->

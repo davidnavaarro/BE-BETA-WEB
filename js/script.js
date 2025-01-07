@@ -69,42 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // VENTANA MODAL
 
-// Obtener elementos del DOM
-const modal = document.getElementById('myModal');
-const openModalBtn = document.getElementById('openModalBtn');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const submitEmailBtn = document.getElementById('submitEmailBtn');
-const emailInput = document.getElementById('emailInput');
+const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('modalOverlay');
 
-// Abrir la ventana modal al hacer clic en el botón
-openModalBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-});
+    // Mostrar la ventana modal
+    openModal.addEventListener('click', () => {
+      modalOverlay.style.display = 'block';
+    });
 
-// Cerrar la ventana modal al hacer clic en el botón de cerrar
-closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+    // Cerrar la ventana modal
+    closeModal.addEventListener('click', () => {
+      modalOverlay.style.display = 'none';
+    });
 
-// Cerrar la ventana modal si se hace clic fuera de la ventana modal
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+    // Cerrar al hacer clic fuera de la ventana modal
+    modalOverlay.addEventListener('click', (event) => {
+      if (event.target === modalOverlay) {
+        modalOverlay.style.display = 'none';
+      }
+    });
 
-// Acción al hacer clic en el botón "Obtener Descuento"
-submitEmailBtn.addEventListener('click', () => {
-    const email = emailInput.value;
-    if (email) {
-        alert(`¡Descuento enviado a: ${email}!`);
-        modal.style.display = 'none'; // Cerrar modal después de enviar
-    } else {
-        alert('Por favor ingresa un correo válido');
-    }
-});
-
-
+    // Manejar el formulario
+    const form = document.getElementById('newsletterForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      alert(`Gracias por suscribirte con el correo: ${email}`);
+      modalOverlay.style.display = 'none';
+    });
 
 // LOCOMOTIVE SCROLL JS
 
