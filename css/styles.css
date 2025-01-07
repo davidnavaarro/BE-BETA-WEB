@@ -5,6 +5,7 @@ body {
     box-sizing: border-box; 
 }
 
+
 img {
     border: 1.75px solid #1009E5;
 }
@@ -126,7 +127,7 @@ h1 {
     top: 0;
     left: 0;
     will-change: transform;
-    transition: transform 0.05s ease-out; /* Transición para movimientos suaves */
+    transition: transform 0.05s ease-out;
 }
 
 /* COLLECTION PAGE */
@@ -134,13 +135,14 @@ h1 {
     /* NEWSLETTER */
     
 .newsletter-banner {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: #1009E5; /* Fondo amarillo */
-    color: white; /* Texto negro */
+    width: 100%; 
+    background-color: #1009E5; 
+    color: white; 
     text-align: center;
-    font-size: 0.75em; /* Tamaño del texto */
-    padding: 10px 0; /* Espaciado vertical */
-    z-index: 20; /* Asegura que esté encima del menú */
+    font-size: 0.75em; 
+    padding: 10px 0; 
+    position: relative;
+    z-index: 40; 
 }
 
 h2 {
@@ -163,6 +165,7 @@ h2 {
     overflow: hidden; 
     background-color: #1009E5;
     padding: 10px 0; 
+    z-index: 40;
 }
 
 .text-banner span {
@@ -170,7 +173,8 @@ h2 {
     white-space: nowrap;
     color: white; 
     font-size: 1.25em; 
-    animation: moveText 20s linear infinite; 
+    animation: moveText 20s linear infinite;
+    z-index: 40;
 }
 
 
