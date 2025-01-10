@@ -160,7 +160,7 @@ h2 {
     overflow: hidden; 
     background-color: #1009E5;
     padding: 10px 0; 
-    /* z-index: 20; */
+    z-index: 5;
 }
 
 .text-banner span {
