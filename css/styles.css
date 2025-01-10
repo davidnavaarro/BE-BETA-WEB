@@ -221,13 +221,13 @@ h2 {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    z-index: -1; /* Aseguramos que estén detrás del contenido */
+    z-index: -1; 
 }
 
 .fullscreen-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantén la proporción de la imagen */
+    object-fit: cover;
 }
 
 
@@ -328,6 +328,8 @@ footer a {
 
 .pr-detalles {
     color: #1009E5;
+    position: sticky;
+    top: 200px;
 }
 
 .pr-sep {
@@ -351,9 +353,12 @@ footer a {
     background: #1009E5;
 
 }
+
 .pr-img {
     border: none;
+    height: 90vh;
 }
+
 .te-puede-interesar {
     font-weight: 700;
 }
@@ -450,7 +455,8 @@ transform: scale(1.05);
     /* PÁGINA DE PRODUCTO */
 
     .pr-img {
-        width: 100vw;
+        height: 80vh;
+        width: 100%;
     }
 
 }
@@ -498,9 +504,10 @@ transform: scale(1.05);
         width: 95vw;
     }
 
-    .pr-img {
-        width: 100vw;
-    }
+   .pr-img {
+    width: auto;
+    height: 70vh;
+   }
 
     .pr-detalles {
         width: 95vw;
