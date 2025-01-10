@@ -142,7 +142,7 @@ h1 {
     font-size: 0.75em; 
     padding: 10px 0; 
     position: relative;
-    z-index: 40; 
+    z-index: 20; 
 }
 
 h2 {
@@ -160,7 +160,7 @@ h2 {
     overflow: hidden; 
     background-color: #1009E5;
     padding: 10px 0; 
-    z-index: 40;
+    /* z-index: 20; */
 }
 
 .text-banner span {
@@ -169,7 +169,7 @@ h2 {
     color: white; 
     font-size: 1.25em; 
     animation: moveText 20s linear infinite;
-    z-index: 40;
+    z-index: 20;
 }
 
 
